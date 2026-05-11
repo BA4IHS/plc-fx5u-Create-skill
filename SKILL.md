@@ -119,13 +119,19 @@ python scripts/write_csv.py <输出路径> <程序名>
 生成的 Python 脚本必须：
 1. 使用 `scripts/write_csv.py` 中的 `write_plc_csv()` 函数，或内联相同的编码逻辑
 2. 包含完整的 `rows` 列表定义
-3. 默认输出路径为 `C:/Users/admin/Desktop/ProgPou_<描述>.csv`
-4. 运行脚本生成最终 CSV 文件
+3. 默认输出到用户当前打开的文件夹（即当前工作目录）；如果获取不到当前文件夹，则回退到用户桌面
+4. 文件命名格式 `ProgPou_<描述>.csv`
+5. 运行脚本生成最终 CSV 文件
 
 脚本参考模板（关键编码部分）：
 
 ```python
-import json, sys
+import json, sys, os
+
+# 输出路径：优先当前工作目录，回退到桌面
+output_dir = os.getcwd() if os.path.exists(os.getcwd()) else os.path.join(os.path.expanduser("~"), "Desktop")
+output_path = os.path.join(output_dir, "ProgPou_<描述>.csv")
+
 # 程序行定义: [步号, 行间声明, 指令, I/O软元件, 空白栏, PI声明, 注解]
 rows = [
     ["0", "", "LDP", "X0", "", "", ""],
