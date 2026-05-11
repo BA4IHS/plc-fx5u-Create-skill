@@ -12,11 +12,19 @@
 
 AI 助手会自动克隆仓库并安装到 skill 目录。
 
-### 方式二：手动安装（Claude Code）
+### 方式二：Git 克隆（Claude Code）
 
 ```bash
 git clone https://github.com/BA4IHS/plc-fx5u-Create-skill.git ~/.claude/skills/plc-fx5u-generator
 ```
+
+### 方式三：下载文件手动放入
+
+1. 下载本仓库 ZIP 并解压
+2. 将解压后的文件夹重命名为 `plc-fx5u-generator`
+3. 放入 Claude Code 的 skills 目录：
+   - Windows：`%USERPROFILE%\.claude\skills\`
+   - macOS / Linux：`~/.claude/skills/`
 
 安装后在对话中直接描述 PLC 控制需求即可触发。
 
