@@ -12,7 +12,7 @@
 
 AI 助手会自动克隆仓库并安装到 skill 目录。
 
-### 方式二：手动安装
+### 方式二：手动安装（Claude Code）
 
 ```bash
 git clone https://github.com/BA4IHS/plc-fx5u-Create-skill.git ~/.claude/skills/plc-fx5u-generator
