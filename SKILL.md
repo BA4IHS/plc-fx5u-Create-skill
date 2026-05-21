@@ -1,6 +1,6 @@
 ---
 name: plc-fx5u-generator
-description: 三菱 FX5U PLC 程序 CSV 文件生成器。当用户提到 PLC、FX5U、FX3U、三菱、梯形图、GX Works3、GX Works2、老程序迁移、M8xxx转换、电机控制、故障报警、定时器、互锁、启动停止、抢答器、送料小车、电梯控制、IO点表，或描述任何工业自动化控制需求（启停、正反转、闪烁、循环、限位、急停）时，立即使用此 skill。即使用户只说了"生成PLC程序"而没有明确指定型号，也应触发此 skill。
+description: 三菱 FX5U PLC 程序 CSV 文件生成器。当用户提到 PLC、FX5U、FX3U、FX2N、三菱、梯形图、GX Works3、GX Works2、GX2转GX3、老程序迁移、电机控制、故障报警、定时器、互锁、启动停止、抢答器、送料小车、电梯控制、IO点表，或描述任何工业自动化控制需求（启停、正反转、闪烁、循环、限位、急停）时，立即使用此 skill。即使用户只说了"生成PLC程序"而没有明确指定型号，也应触发此 skill。
 ---
 
 # 三菱 FX5U PLC 程序生成器
@@ -158,7 +158,7 @@ rows = [
 
 ## GX Works2 / FX3U → GX Works3 / FX5U 差异
 
-当用户提到 FX3U、GX Works2、老程序迁移、M8xxx 等关键词时，注意以下差异：
+当用户提到 FX3U、FX2N、GX Works2、GX2转GX3、老程序迁移等关键词时，注意以下差异：
 
 ### 特殊继电器/寄存器映射
 
